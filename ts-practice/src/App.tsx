@@ -1,4 +1,5 @@
 import UserInfo from './component/UserInfo'
+import FocusInput from './component/FocusInput'
 import AdminInfo from './component/AdminInfo'
 import type { Info, Admin } from './Type'
 import Counter from './component/counter'
@@ -32,6 +33,8 @@ function App() {
       <Counter/>
       <hr></hr>
       <UserProfile/>
+      <hr></hr>
+      <FocusInput/>
       
     </>
   )
