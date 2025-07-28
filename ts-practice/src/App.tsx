@@ -4,6 +4,10 @@ import AdminInfo from './component/AdminInfo'
 import type { Info, Admin } from './Type'
 import Counter from './component/counter'
 import UserProfile from './component/UserProfile'
+import ContextCounter from './component/ContextCounter'
+import ContextProvider from './component/ContextProvider'
+import Effect from './component/Effect'
+import HookForm from './component/HookForm'
 
 function App() {
 
@@ -35,6 +39,14 @@ function App() {
       <UserProfile/>
       <hr></hr>
       <FocusInput/>
+      <hr></hr>
+      <ContextProvider>
+        <ContextCounter/>
+      </ContextProvider>
+      <hr></hr>
+      <Effect/>
+      <hr></hr>
+      <HookForm/>
       
     </>
   )
