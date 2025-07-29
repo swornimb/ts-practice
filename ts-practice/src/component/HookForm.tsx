@@ -10,7 +10,7 @@ interface FormData{
     password:string;
 }    
 
-const {register,handleSubmit,formState: { errors }} = useForm<FormData>()
+const {register,handleSubmit,formState: { errors, isSubmitSuccessful }} = useForm<FormData>()
 
 const onSubmit:SubmitHandler<FormData> = (data)=>{
     console.log(data)
@@ -49,7 +49,7 @@ const onSubmit:SubmitHandler<FormData> = (data)=>{
                 })} />
             {errors.password&&<p style={{color: "red"}}>{errors.password.message}</p>}
         </div>
-        <button type="submit">Submit</button>
+        <button disabled={isSubmitSuccessful} type="submit">Submit</button>
     </form>
   )
 }
