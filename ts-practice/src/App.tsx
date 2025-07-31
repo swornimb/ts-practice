@@ -8,6 +8,10 @@ import ContextCounter from './component/ContextCounter'
 import ContextProvider from './component/ContextProvider'
 import Effect from './component/Effect'
 import HookForm from './component/HookForm'
+import EffectForUse from './component/EffectForUse'
+import { Suspense } from 'react'
+import ContextInUse from './component/ContextInUse'
+import ThemeToggler from './component/ThemeToggler'
 
 function App() {
 
@@ -28,6 +32,13 @@ function App() {
 
   return (
     <>
+    <Suspense fallback={<div> Loading.....</div>}>
+      <EffectForUse/>
+    </Suspense>
+  
+    <ContextInUse>
+      <ThemeToggler/>
+    </ContextInUse>
       <div>
         <UserInfo userData={user}/>
         <hr></hr>
